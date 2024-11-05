@@ -186,7 +186,7 @@ jobs:
       run: |
         python -m pip install --upgrade pip
         pip install -r requirements.txt
-
+        
     - name: Setup Flutter ${{ env.FLUTTER_VERSION }}
       uses: subosito/flutter-action@v2
       with:
@@ -202,7 +202,7 @@ jobs:
       run: |
         flutter config --no-analytics
         flet build apk --verbose --build-number=$BUILD_NUMBER --build-version=$BUILD_VERSION
-
+        flet: ^0.24.1 # or the latest version
     - name: Upload APK Artifact
       uses: actions/upload-artifact@v4.3.4
       with:
