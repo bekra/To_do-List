@@ -1,0 +1,6 @@
+run - name
+      dependencies:
+        flutter:
+          sdk: flutter
+          flet: ^0.25.0  # Update to latest version
+          flet_embed: ^0.25.0
